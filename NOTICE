@@ -1,0 +1,18 @@
+plc-sqlite
+Copyright (c) 2026 Chad Miller
+
+This project builds on the did-method-plc reference implementation by
+Bluesky Social PBC:
+
+  https://github.com/did-method-plc/did-method-plc
+  Dual MIT/Apache-2.0 License
+  Copyright (c) 2022-2026 Bluesky Social PBC
+
+`@did-plc/server` and `@did-plc/lib` are consumed as unmodified npm
+dependencies. No upstream source is redistributed in this repository.
+
+`sqlite-db.js` is an original implementation of the `PlcDatabase` interface
+that `@did-plc/server` accepts. Its control flow — validate the proposed
+operation, hash it, insert, nullify superseded operations, assert the prev
+match — follows the upstream Postgres store at `@did-plc/server@0.0.1`
+(`dist/db/index.js`) and is derived from reading it.

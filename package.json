@@ -1,0 +1,36 @@
+{
+  "name": "plc-sqlite",
+  "version": "0.0.1",
+  "description": "A SQLite-backed did:plc directory server for self-contained dev and preview environments. Injects a SQLite PlcDatabase into the upstream @did-plc/server (no Postgres).",
+  "license": "MIT",
+  "author": "Chad Miller",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigmoves/plc-sqlite.git"
+  },
+  "homepage": "https://github.com/bigmoves/plc-sqlite#readme",
+  "bugs": "https://github.com/bigmoves/plc-sqlite/issues",
+  "keywords": [
+    "atproto",
+    "did-plc",
+    "did",
+    "sqlite",
+    "bluesky"
+  ],
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/smoke.js"
+  },
+  "dependencies": {
+    "@atproto/common": "0.3.0",
+    "@did-plc/lib": "0.0.4",
+    "@did-plc/server": "0.0.1",
+    "better-sqlite3": "^11.10.0",
+    "multiformats": "^9.9.0"
+  },
+  "devDependencies": {
+    "@atproto/crypto": "0.4.3"
+  }
+}
